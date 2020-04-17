@@ -1,0 +1,97 @@
+h1{
+    color:blue;
+    font-family: DFKai-sb;
+}
+
+label.name{
+    color:blue;
+    font-family: DFKai-sb;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+label.height{
+    color:green;
+    font-family: DFKai-sb;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+label.gender{
+    color:peru;
+    font-family: DFKai-sb;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+label.position{
+    color:rgb;
+    font-family: DFKai-sb;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+label.interest{
+    color:blueviolet;
+    font-family: DFKai-sb;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+p.jsoncontent{
+    font-family: DFKai-sb;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#form_data_test01{
+    padding: 10px;
+    text-align: left;
+    display: none;
+    background-color: lightblue;
+    border: solid 1px #c3c3c3;
+}
+
+#form_writting{
+    font-family: DFKai-sb;
+    font-size: 20px;
+    font-weight:bold;
+    text-align: center;
+    background:#68e979;
+    height:30px;
+    width:100px;
+    position:absolute;
+}
+
+label.cm {
+    font-family: DFKai-sb;
+}
+
+#Gender_Boy {
+    font-family: DFKai-sb;
+}
+
+#Height_check{
+    font-family: DFKai-sb;
+    color: gray;
+}
+
+#Name_check{
+    font-family: DFKai-sb;
+    color: gray;
+}
+
+#Gender_check{
+    font-family: DFKai-sb;
+    color: gray;
+}
+
+#Position_check{
+    font-family: DFKai-sb;
+    color: gray;
+}
+
+#Interest_check{
+    font-family: DFKai-sb;
+    color: gray;
+}

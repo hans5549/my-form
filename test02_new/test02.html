@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--指示web瀏覽器關於頁面使用哪個html版本進行編寫指令-->
+<!--聲明該文黨定義為html5-->
+
+<html>
+<!--HTML頁面的根元素-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>控制項測試</title>
+
+    <script src="jquery-3.5.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="G:/我的雲端硬碟/001_黃芃銘/03_學習/8_網頁/表單/test02_new/test02_style.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <script src="G:/我的雲端硬碟/001_黃芃銘/03_學習/8_網頁/表單/test02_new/test02_function_formname_toggle.js"></script>
+    <script src="G:/我的雲端硬碟/001_黃芃銘/03_學習/8_網頁/表單/test02_new/test02_function_asjson.js"></script>
+    <script src="G:/我的雲端硬碟/001_黃芃銘/03_學習/8_網頁/表單/test02_new/test02_function_cleardata.js"></script>
+    <script src="G:/我的雲端硬碟/001_黃芃銘/03_學習/8_網頁/表單/test02_new/test02_function_analysisjson.js"></script>
+
+    <script src="G:/我的雲端硬碟/001_黃芃銘/03_學習/8_網頁/表單/test02_new/test02_function_heightinput_check.js"></script>
+    <script src="G:/我的雲端硬碟/001_黃芃銘/03_學習/8_網頁/表單/test02_new/test02_function_nameinput_check.js"></script>
+    <script src="G:/我的雲端硬碟/001_黃芃銘/03_學習/8_網頁/表單/test02_new/test02_function_genderinput_check.js"></script>
+    <script src="G:/我的雲端硬碟/001_黃芃銘/03_學習/8_網頁/表單/test02_new/test02_function_positioninput_check.js"></script>
+    <script src="G:/我的雲端硬碟/001_黃芃銘/03_學習/8_網頁/表單/test02_new/test02_function_checkboxinput_check.js"></script>
+</head>
+
+<body>
+    <h1 id="form_name">表單測試</h1>
+    <div id="form_writting">尚未填寫</div>
+    <br /><br />
+    <form name="form_data_test01" id="form_data_test01" method="post" action="/test01.html">
+        <!--填姓名-->
+        <label for="Name" class="name">姓名</label><br>
+        <input type="text" id="Name" name="Name"><br>
+        <label id="Name_check" class="Name_check">尚未填寫</label>
+        <br /><br />
+
+        <!--填身高-->
+        <label for="Height" class="height">身高</label><br />
+        <input type="number" id="Height" name="Height" min="1" max="250">
+        <label class="cm">公分(CM)</label><br />
+        <label id="Height_check" class="Height_check">尚未填寫</label>
+        <br /><br />
+
+        <!--選擇性別-->
+        <label for="Gender" class="gender">性別</label><br />
+        <input type="radio" id="Gender_Boy" name="Gender" value="Boy">
+        <label for="Boy">男生<br />
+            <input type="radio" id="Gender_Girl" name="Gender" value="Girl">
+            <label for="Girl">女生<br />
+                <label id="Gender_check" class="Gender_check">請選擇性別</label>
+                <br /><br />
+
+                <!--選擇職位類型-->
+                <label for="Position" class="position">職位類型</label><br />
+                <select id="Position" name="Position" class="position">
+                    <option value="Team member">組員</option>
+                    <option value="Team leader">組長</option>
+                    <option value="Section head">課長</option>
+                    <option value="Assistant manager">副理</option>
+                    <option value="Manager">經理</option>
+                    <option value="Vice president">副總</option>
+                    <option value="General manager">總經理</option>
+                    <option value="Chairman">董事長</option>
+                </select><br />
+                <label id="Position_check" class="Position_check">請選擇職位</label>
+                <br>
+                <br />
+
+                <!--選擇興趣內容-->
+                <label for="Interest" class="interest">興趣內容</label><br />
+                <input type="checkbox" id="Interest_Movies" name="Interest" value="Movies">電影
+                <input type="checkbox" id="Interest_TV" name="Interest" value="TV">電視
+                <input type="checkbox" id="Interest_Computer" name="Interest" value="Computer">電腦
+                <input type="checkbox" id="Interest_Bike" name="Interest" value="Bike">單車
+                <input type="checkbox" id="Interest_Volleyball" name="Interest" value="Volleyball">排球<br />
+                <input type="checkbox" id="Interest_Soccer" name="Interest" value="Soccer">足球
+                <input type="checkbox" id="Interest_Basketball" name="Interest" value="Basketball">籃球
+                <input type="checkbox" id="Interest_Reading" name="Interest" value="Reading">閱讀
+                <input type="checkbox" id="Interest_Hiking" name="Interest" value="Hiking">散步
+                <input type="checkbox" id="Interest_Fishing" name="Interest" value="Fishing">釣魚<br />
+                <label id="Interest_check" class="Interest_check">請選擇興趣</label>
+                <br />
+                <br />
+
+                <!--填寫內容輸出成JSON-->
+                <button type="button" id="getvaluebutton" onclick="getvalueasjson()">Send</button>
+                <!--清除填寫的資料-->
+                <button type="button" onclick="cleardata()">clear</button>
+                <!--回復資料-->
+                <button type="button" onclick="analysisjson()">Analysis Json Content</button>
+                <br />
+                <br />
+                <!--顯示JSON內容-->
+                <p class="jsoncontent">Json content</p>
+                <textarea id="Jsoncontenttextarea" rows="10" cols="30"></textarea>
+    </form>
+</body>
+
+</html>
